@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+data/
+!data/README.md
+output/
+*.tif
+*.tiff
+*.parquet
+.env

@@ -1,0 +1,32 @@
+[project]
+name = "nyc-from-orbit"
+version = "0.0.1"
+description = "Does satellite-derived imagery add predictive information about neighborhood crime beyond lagged crime and census covariates?"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "pandas",
+  "geopandas",
+  "rasterio",
+  "pystac-client",
+  "planetary-computer",
+  "requests",
+  "pyarrow",
+  "statsmodels",
+  "shapely",
+  "pyproj",
+  "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest"]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
