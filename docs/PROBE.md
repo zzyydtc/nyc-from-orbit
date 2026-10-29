@@ -9,12 +9,12 @@ Run date: 2026-10-27. Script: `scripts/probe_phase0.py`. The goal was to check, 
 | Complaints, 2006-2025 | NYC Open Data `qgea-i56i` | Available | About 460k-570k rows per year; 2018-2025 fully covered. A few rows have bad dates (years before 2006) and must be filtered. |
 | Shooting incidents | NYC Open Data `833y-fsy8` | Available through 2024 | 2025 lives in the year-to-date dataset and still needs to be confirmed. |
 | Census tracts, 2020 | NYC Open Data `63ge-mke6` | Available | 2,325 features, `geoid` key present. |
-| ACS 5-year covariates | Census API | Blocked: needs a key | The API returns "Missing Key" without one. A free key is required (request at api.census.gov/data/key_signup.html). |
+| ACS 5-year covariates | Census API | Available with a free key | Without a key the API returns "Missing Key". With one, a 2023 query returned 805 Brooklyn tracts. Key is read from `CENSUS_API_KEY`. |
 | Sentinel-2 L2A | Planetary Computer STAC | Available | A 1 km box returned about 36 scenes per summer; a real NDVI chip read at 10 m resolution (112 x 83 pixels). |
 | Landsat Collection 2 L2 | Planetary Computer STAC | Available | 24-31 scenes per summer for 2019 and 2024; carries the thermal band for surface temperature. |
 | Sentinel-1 RTC | Planetary Computer STAC | Available | 8 scenes per summer at 10 m; a VV chip read succeeded. Whether the signal detects building change is a Phase 3 question. |
 | AlphaEarth embeddings | Public COGs on Source Cooperative (CC BY 4.0) | Available, 2017-2025 | UTM zone 18N covers NYC; 64 channels; files are large (up to several GB) but cloud-optimized. The files are stored bottom-up, so the supplied VRTs must be used. No account needed. |
-| Night lights (VIIRS) | Not on Planetary Computer | Blocked: needs an account | NASA Black Marble and the Earth Observation Group annual product both need a login. |
+| Night lights (VIIRS Black Marble) | NASA LAADS DAAC, product VNP46A4 (annual), found through CMR | Available with a free Earthdata token | Tile h10v04 covers NYC. A ranged download with the token returned HTTP 206 and a valid HDF5 header. Token is read from `EARTHDATA_TOKEN`. Listing the LAADS archive directory timed out, so granules are located through CMR instead. |
 
 ## Observations
 
@@ -23,11 +23,10 @@ Run date: 2026-10-27. Script: `scripts/probe_phase0.py`. The goal was to check, 
 
 ## Decision
 
-**Go.** Every layer needed for the minimum version (outcomes, tracts, Sentinel-2, Landsat, AlphaEarth) is reachable without an account, except ACS covariates.
+**Go.** Every planned layer is reachable: outcomes, tracts, ACS, Sentinel-2, Landsat, AlphaEarth and night lights. Keys and tokens are read from environment variables and never stored in the repository.
 
 Open items:
 
-1. ACS covariates need a free Census API key. Without them the incremental-value test cannot control for demographics.
-2. Night lights need an account; the default is to drop them from v0.1 and note it as a limitation.
-3. Confirm the 2025 shooting data source.
-4. Radar building-change test: data is present, the signal is untested.
+1. Confirm the 2025 shooting data source.
+2. Radar building-change test: data is present, the signal is untested.
+3. The Earthdata token expires after about 60 days; regenerate it if downloads start returning 401.
