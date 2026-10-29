@@ -17,6 +17,11 @@ dependencies = [
   "shapely",
   "pyproj",
   "matplotlib",
+  "scikit-learn",
+  "scipy",
+  "h5py",
+  "odc-stac",
+  "dask",
 ]
 
 [project.optional-dependencies]
