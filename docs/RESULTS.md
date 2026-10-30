@@ -44,6 +44,8 @@ A time-boxed check of whether C-band radar backscatter (Sentinel-1 RTC, ascendin
 | Long difference | Top 5% of tracts by filings minus tracts with none | +0.50 dB | 117 vs none |
 | Panel | OLS, year-over-year VV change vs filings in the two prior years (year effects, tract-clustered SE) | +0.002 dB per filing (p < 0.001) | 13,950 tract-years |
 
+Scope: this is a tract-level association, not event-level recovery of individual construction sites; coherence-based change detection was not attempted.
+
 Reading: tracts with more new-building filings show larger backscatter increases, a modest but clear association. Demolition filings show a rank association but no effect once new buildings and controls are included. Filings are applications, not completed buildings, and one filing can be a large tower or a small house, so counts are a noisy yardstick; effect sizes are small in absolute terms. Backscatter level and change were then added to the prediction models (below).
 
 ### Radar features in the prediction models

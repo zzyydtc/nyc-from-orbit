@@ -238,6 +238,8 @@ The repository is private now and will be made public. Everything is built to op
 
 ## 7. Schedule (starts 2026-10-25)
 
+Status at v0.1: Phases 0-2 and 4 are done except the Power BI report file. Phase 3 was done as a tract-level association between backscatter change and permit filings, plus radar features in the prediction models; event-level recovery against permits was not attempted. See `RESULTS.md`.
+
 Effort figures are estimates, not commitments. Target for a first public release is 2026-11-02.
 
 | Phase | Work | Effort | Target date | Exit criterion |

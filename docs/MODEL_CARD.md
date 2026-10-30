@@ -17,7 +17,7 @@ A set of Poisson regression comparisons that ask whether satellite-derived tract
 
 ## Data
 
-See `DATA_SOURCES.md`. Outcomes are NYC Open Data point records aggregated to 2020 census tracts for 2018-2025. Imagery features are annual summaries per tract.
+See `DATA_SOURCES.md`. Outcomes are NYC Open Data point records aggregated to 2020 census tracts for 2018-2025. Imagery features (vegetation, temperature, night lights, learned embeddings, radar backscatter) are annual summaries per tract. Department of Buildings filings are used only to check the radar signal, not as model inputs.
 
 ## Evaluation
 
