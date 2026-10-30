@@ -1,6 +1,6 @@
 [project]
 name = "nyc-from-orbit"
-version = "0.0.1"
+version = "0.1.0"
 description = "Does satellite-derived imagery add predictive information about neighborhood crime beyond lagged crime and census covariates?"
 readme = "README.md"
 requires-python = ">=3.11"

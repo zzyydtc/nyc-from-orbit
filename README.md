@@ -20,7 +20,7 @@ Details, tables and limitations: [docs/RESULTS.md](docs/RESULTS.md).
 
 ## Data
 
-NYC Open Data (complaints, shootings, tracts), American Community Survey, Sentinel-2, Landsat, VIIRS Black Marble, and AlphaEarth annual embeddings. All public; see [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md). Two free credentials are needed: a Census API key (`CENSUS_API_KEY`) and a NASA Earthdata token (`EARTHDATA_TOKEN`).
+NYC Open Data (complaints, shootings, tracts, Department of Buildings filings), American Community Survey, Sentinel-1, Sentinel-2, Landsat, VIIRS Black Marble, and AlphaEarth annual embeddings. All public; see [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md). Two free credentials are needed: a Census API key (`CENSUS_API_KEY`) and a NASA Earthdata token (`EARTHDATA_TOKEN`).
 
 ## Run it
 
@@ -28,7 +28,7 @@ NYC Open Data (complaints, shootings, tracts), American Community Survey, Sentin
 pip install -e ".[dev]"
 ```
 
-The ordered script list is in [docs/RESULTS.md](docs/RESULTS.md#reproduce). Raw and derived data are not committed; scripts download them.
+`requirements-lock.txt` records the package versions the results were produced with (Python 3.12, Windows). The ordered script list is in [docs/RESULTS.md](docs/RESULTS.md#reproduce). Raw and derived data are not committed; scripts download them.
 
 ## Documents
 
