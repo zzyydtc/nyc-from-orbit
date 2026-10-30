@@ -11,3 +11,4 @@
 - Radar probe: Sentinel-1 backscatter versus DOB new-building and demolition filings.
 - Radar features in the incremental-value models, with placebo.
 - Static interactive web map (`scripts/16_build_web_map.py`).
+- Two-page brief (`docs/BRIEF.md`).

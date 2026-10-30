@@ -32,6 +32,7 @@ The ordered script list is in [docs/RESULTS.md](docs/RESULTS.md#reproduce). Raw 
 
 ## Documents
 
+- [docs/BRIEF.md](docs/BRIEF.md): two-page summary
 - [docs/PLAN.md](docs/PLAN.md): original project plan
 - [docs/PROBE.md](docs/PROBE.md): data availability probe
 - [docs/RESULTS.md](docs/RESULTS.md): results and limitations
