@@ -8,3 +8,4 @@
 - Imagery features: Sentinel-2, Landsat, AlphaEarth, VIIRS night lights.
 - Incremental-value test, robustness checks with placebo, figures.
 - Results, data sources, model card and Power BI data model documents.
+- Radar probe: Sentinel-1 backscatter versus DOB new-building and demolition filings.

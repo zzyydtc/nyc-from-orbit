@@ -2,7 +2,7 @@
 
 Do satellite-derived features (heat, vegetation, night lights, learned image embeddings) add anything to next year's felony complaints and shooting counts for a New York City census tract, beyond last year's counts and census demographics? A tract-level, 2018-2025 test built on public data.
 
-**Status: v0.1 in progress.** The data pipeline, incremental-value test and robustness checks run end to end. The Power BI report, a static web map and the radar building-change test are not finished.
+**Status: v0.1 in progress.** The data pipeline, incremental-value test and robustness checks run end to end. A radar probe shows Sentinel-1 backscatter tracks new-building filings. The Power BI report, a static web map and radar features in the prediction models are not finished.
 
 ## Headline result
 

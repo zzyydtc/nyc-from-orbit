@@ -31,6 +31,21 @@ With a simple baseline (last year's count entered linearly plus ACS covariates),
 
 Under the strong baseline, vegetation and temperature features reduce forward-test deviance by about 6% (about 10% with negative binomial, 6% with the top 1% of tracts dropped), and all features together by 7-11%. In spatial cross-validation the same features give only about 1%. The forward test covers two years, so this is a lead worth following, not a conclusion.
 
+## Radar probe: does Sentinel-1 see construction?
+
+A time-boxed check of whether C-band radar backscatter (Sentinel-1 RTC, ascending orbit 33, June-August median, VV polarisation, 20 m) tracks building activity, measured against DOB new-building and full-demolition job filings (legacy BIS and DOB NOW, 2018 onward). This tests the sensor, not crime: radar features are not yet in the prediction models.
+
+| View | Test | Estimate | n |
+|---|---|---|---|
+| Long difference | Spearman, 2025 minus 2018 VV vs new-building filings 2018-2023 | +0.30 | 2,325 tracts |
+| Long difference | Spearman, same change vs demolition filings | +0.24 | 2,325 |
+| Long difference | OLS, dB per new-building filing (controls: 2018 VV, log population) | +0.005 (p < 0.001) | 2,325 |
+| Long difference | OLS, dB per demolition filing | 0.000 (p = 0.99) | 2,325 |
+| Long difference | Top 5% of tracts by filings minus tracts with none | +0.50 dB | 117 vs none |
+| Panel | OLS, year-over-year VV change vs filings in the two prior years (year effects, tract-clustered SE) | +0.002 dB per filing (p < 0.001) | 13,950 tract-years |
+
+Reading: tracts with more new-building filings show larger backscatter increases, a modest but clear association. Demolition filings show a rank association but no effect once new buildings and controls are included. Filings are applications, not completed buildings, and one filing can be a large tower or a small house, so counts are a noisy yardstick; effect sizes are small in absolute terms. The next step, not done, is adding backscatter level and change to the incremental-value models.
+
 ## Checks that passed
 
 - **Placebo:** shuffling imagery features across tracts within each year gave gains between -0.9% and +0.3%, as it should.
@@ -44,7 +59,7 @@ Under the strong baseline, vegetation and temperature features reduce forward-te
 - The Landsat 2018 summer composite uses only 3 usable scenes; the temperature feature is noisier that year.
 - The forward test has two years. Shootings fell sharply in 2025, a distribution shift that may affect it.
 - AlphaEarth embeddings are learned from imagery and other sources whose details are not fully documented here; they were reduced to 8 components, which may discard information.
-- Not yet done in v0.1: the radar building-change test, a spatial error analysis, and time-varying ACS covariates.
+- Not yet done in v0.1: radar features in the prediction models (the probe above only checks the sensor), a spatial error analysis, and time-varying ACS covariates.
 
 ## Reproduce
 
@@ -60,6 +75,9 @@ python scripts/07_build_panel.py
 python scripts/08_incremental_value.py felony_complaints
 python scripts/09_robustness.py felony_complaints
 python scripts/10_make_figures.py
+python scripts/12_fetch_dob.py
+python scripts/13_features_s1.py 2018 2019 2020 2021 2022 2023 2024 2025
+python scripts/14_radar_probe.py
 ```
 
 ## Maps
