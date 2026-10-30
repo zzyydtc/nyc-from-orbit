@@ -2,7 +2,7 @@
 
 Do satellite-derived features (heat, vegetation, night lights, learned image embeddings) add anything to next year's felony complaints and shooting counts for a New York City census tract, beyond last year's counts and census demographics? A tract-level, 2018-2025 test built on public data.
 
-**Status: v0.1 in progress.** The data pipeline, incremental-value test and robustness checks run end to end. A radar probe shows Sentinel-1 backscatter tracks new-building filings, but radar features add about one percent or less to the prediction models. The Power BI report and a static web map are not finished.
+**Status: v0.1 in progress.** The data pipeline, incremental-value test and robustness checks run end to end. A radar probe shows Sentinel-1 backscatter tracks new-building filings, but radar features add about one percent or less to the prediction models. A static interactive map is built; the Power BI report is not finished.
 
 ## Headline result
 
@@ -13,6 +13,10 @@ Do satellite-derived features (heat, vegetation, night lights, learned image emb
 Details, tables and limitations: [docs/RESULTS.md](docs/RESULTS.md).
 
 ![Incremental gain](docs/figures/incremental_gain.png)
+
+## Interactive map
+
+`python scripts/16_build_web_map.py` writes `docs/map/index.html`, a self-contained map (year slider; outcomes, vegetation, temperature, night lights, radar). Serve it with `python -m http.server` from `docs/map`, or host it on any static site. It loads Leaflet and OpenStreetMap tiles from the web.
 
 ## Data
 

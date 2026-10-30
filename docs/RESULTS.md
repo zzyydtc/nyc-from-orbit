@@ -91,6 +91,7 @@ python scripts/13_features_s1.py 2018 2019 2020 2021 2022 2023 2024 2025
 python scripts/14_radar_probe.py
 python scripts/15_radar_models.py felony_complaints
 python scripts/15_radar_models.py shootings
+python scripts/16_build_web_map.py
 ```
 
 ## Maps
