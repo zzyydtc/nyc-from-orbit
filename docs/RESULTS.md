@@ -44,7 +44,18 @@ A time-boxed check of whether C-band radar backscatter (Sentinel-1 RTC, ascendin
 | Long difference | Top 5% of tracts by filings minus tracts with none | +0.50 dB | 117 vs none |
 | Panel | OLS, year-over-year VV change vs filings in the two prior years (year effects, tract-clustered SE) | +0.002 dB per filing (p < 0.001) | 13,950 tract-years |
 
-Reading: tracts with more new-building filings show larger backscatter increases, a modest but clear association. Demolition filings show a rank association but no effect once new buildings and controls are included. Filings are applications, not completed buildings, and one filing can be a large tower or a small house, so counts are a noisy yardstick; effect sizes are small in absolute terms. The next step, not done, is adding backscatter level and change to the incremental-value models.
+Reading: tracts with more new-building filings show larger backscatter increases, a modest but clear association. Demolition filings show a rank association but no effect once new buildings and controls are included. Filings are applications, not completed buildings, and one filing can be a large tower or a small house, so counts are a noisy yardstick; effect sizes are small in absolute terms. Backscatter level and change were then added to the prediction models (below).
+
+### Radar features in the prediction models
+
+Sentinel-1 summer VV and VH backscatter (previous year), and the one-year VV change, were added to the strong baseline and tested the same way (Poisson; spatial-block CV / forward test; percent deviance reduction).
+
+| Outcome | Radar level | Level + change (target years 2020 on) | All optical, light, embed | All with radar |
+|---|---|---|---|---|
+| Felony complaints | +0.8 / +0.3 | +0.6 / +0.3 | -0.2 / +0.9 | -0.6 / +0.4 |
+| Shootings | +0.6 / +0.7 | +0.5 / +1.0 | +0.9 / +6.8 | +1.7 / +6.2 |
+
+Negative binomial raises the radar-level gains to about +1.0 to +1.6 and a different fold seed lowers them to about +0.3 to +0.7. Shuffling the radar columns across tracts gives -0.3 to +0.1, so the small positive values are above the placebo but of the order of one percent. Reading: radar sees construction (previous section) but does not add usable predictive value for either outcome. For shootings the forward-test gain still comes from the optical and embedding features, and adding radar to them does not raise it (6.8 to 6.2).
 
 ## Checks that passed
 
@@ -59,7 +70,7 @@ Reading: tracts with more new-building filings show larger backscatter increases
 - The Landsat 2018 summer composite uses only 3 usable scenes; the temperature feature is noisier that year.
 - The forward test has two years. Shootings fell sharply in 2025, a distribution shift that may affect it.
 - AlphaEarth embeddings are learned from imagery and other sources whose details are not fully documented here; they were reduced to 8 components, which may discard information.
-- Not yet done in v0.1: radar features in the prediction models (the probe above only checks the sensor), a spatial error analysis, and time-varying ACS covariates.
+- Not yet done in v0.1: a spatial error analysis, and time-varying ACS covariates.
 
 ## Reproduce
 
@@ -78,6 +89,8 @@ python scripts/10_make_figures.py
 python scripts/12_fetch_dob.py
 python scripts/13_features_s1.py 2018 2019 2020 2021 2022 2023 2024 2025
 python scripts/14_radar_probe.py
+python scripts/15_radar_models.py felony_complaints
+python scripts/15_radar_models.py shootings
 ```
 
 ## Maps
