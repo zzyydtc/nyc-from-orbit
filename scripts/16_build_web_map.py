@@ -78,7 +78,7 @@ html,body{height:100%;margin:0;font:14px/1.4 system-ui,sans-serif;color:#1b1b1b}
 #ctl select,#ctl input{width:100%;margin:4px 0}
 #legend{bottom:24px;left:10px}
 #legend i{display:inline-block;width:18px;height:12px;margin-right:6px;vertical-align:middle}
-#note{bottom:24px;right:10px;width:280px;font-size:12px;color:#444}
+#note{bottom:24px;right:10px;width:300px;font-size:11px;color:#444;max-height:40vh;overflow:auto}
 h1{font-size:15px;margin:0 0 6px}
 @media(max-width:700px){#ctl,#note{width:auto;left:10px}#note{display:none}}
 </style></head><body>
@@ -90,7 +90,7 @@ h1{font-size:15px;margin:0 0 6px}
 <div id="note" class="panel">Census tracts with at least 100 residents. Rates use 2023 population for every year.
 Reported crime reflects reporting and enforcement as well as offending; figures are descriptive, not causal.
 Independent project, not affiliated with or endorsed by the NYPD or any other agency.
-Data: NYC Open Data, ACS, Sentinel-1/2, Landsat, VIIRS (see repository for sources).</div>
+Data: NYC Open Data (NYPD, DCP; aggregated and modified, not endorsed by the City), ACS (uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau), Contains modified Copernicus Sentinel data 2018-2025, Landsat (USGS), VIIRS (NASA), AlphaEarth (Google and Google DeepMind). See the repository for sources.</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script>
 const P=/*PAYLOAD*/;

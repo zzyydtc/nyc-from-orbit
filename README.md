@@ -39,10 +39,14 @@ The ordered script list is in [docs/RESULTS.md](docs/RESULTS.md#reproduce). Raw 
 - [docs/MODEL_CARD.md](docs/MODEL_CARD.md): intended use and failure modes
 - [docs/POWERBI.md](docs/POWERBI.md): Power BI data model and export
 
+## Attribution
+
+This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau. Contains modified Copernicus Sentinel data 2018-2025. The AlphaEarth Foundations Satellite Embedding dataset is produced by Google and Google DeepMind. Landsat data courtesy of the U.S. Geological Survey; VIIRS Black Marble courtesy of NASA LAADS DAAC. NYC data courtesy of the NYPD, Department of City Planning and Department of Buildings through NYC Open Data, aggregated and modified here; the City does not endorse this project. Terms review: [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md).
+
 ## Responsible use
 
 This is an independent open-source project, not affiliated with or endorsed by the NYPD or any other agency. Reported crime reflects reporting and enforcement as well as offending. Results are descriptive and associational at annual, tract level; the project must not be used to target individuals or demographic groups.
 
 ## License
 
-Code: MIT (see [LICENSE](LICENSE)). AlphaEarth embeddings are CC BY 4.0, produced by Google and Google DeepMind.
+Code: MIT (see [LICENSE](LICENSE)). Documentation and figures: CC BY 4.0. AlphaEarth embeddings are CC BY 4.0, produced by Google and Google DeepMind.
