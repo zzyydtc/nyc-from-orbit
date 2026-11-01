@@ -49,4 +49,4 @@ This is an independent open-source project, not affiliated with or endorsed by t
 
 ## License
 
-Code: MIT (see [LICENSE](LICENSE)). Documentation and figures: CC BY 4.0. AlphaEarth embeddings are CC BY 4.0, produced by Google and Google DeepMind.
+Code: MIT (see [LICENSE](LICENSE)). Documentation and figures: CC BY 4.0 (see [LICENSE-docs.md](LICENSE-docs.md)). AlphaEarth embeddings are CC BY 4.0, produced by Google and Google DeepMind.
