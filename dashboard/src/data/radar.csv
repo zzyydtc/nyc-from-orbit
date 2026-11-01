@@ -1,0 +1,8 @@
+view,test,estimate,p,n
+long_difference,spearman d_vv vs new_buildings,0.3036,0.0,2325
+long_difference,spearman d_vv vs demolitions,0.2363,0.0,2325
+long_difference,"ols d_vv ~ new_buildings (controls: vv_2018, log_pop), dB per filing",0.0049,0.0,2325
+long_difference,"ols d_vv ~ demolitions (controls: vv_2018, log_pop), dB per filing",0.0,0.9855,2325
+long_difference,"mean d_vv, top-5% filings minus zero-filings tracts (dB)",0.5028,,117
+panel,"ols d_vv ~ new_buildings_prev2 (year effects, tract-clustered SE), dB per filing",0.0019,0.0,13950
+panel,"ols d_vv ~ demolitions_prev2 (year effects, tract-clustered SE), dB per filing",0.0005,0.2725,13950

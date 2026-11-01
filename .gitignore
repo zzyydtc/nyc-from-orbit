@@ -14,3 +14,5 @@ output/
 
 dashboard/node_modules/
 dashboard/.observablehq/cache/
+!dashboard/src/data/
+!docs/dashboard/_file/data/

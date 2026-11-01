@@ -1,0 +1,45 @@
+outcome,family,variant,features,cv_gain_pct,fwd_gain_pct
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+env,0.3,0.02
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+light,-1.74,1.36
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+embed,1.38,0.4
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+all,-0.2,0.87
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+env,0.35,-2.1
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+light,0.18,1.74
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+embed,2.05,1.39
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+all,0.82,1.11
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+env,0.47,-1.78
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+light,0.22,1.42
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+embed,0.73,0.54
+felony_complaints,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+all,0.83,-0.1
+felony_complaints,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+env,-0.03,-0.39
+felony_complaints,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+light,-0.02,-0.01
+felony_complaints,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+embed,-0.14,-0.08
+felony_complaints,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+all,-0.16,-0.14
+felony_complaints,radar,"strong baseline, radar level",+radar,0.76,0.3
+felony_complaints,radar,"strong baseline, radar level","+all optical, light, embed",-0.2,0.87
+felony_complaints,radar,"strong baseline, radar level",+all with radar,-0.6,0.37
+felony_complaints,radar,PLACEBO: radar shuffled across tracts,+radar,-0.06,0.04
+felony_complaints,radar,PLACEBO: radar shuffled across tracts,"+all optical, light, embed",-0.2,0.87
+felony_complaints,radar,PLACEBO: radar shuffled across tracts,+all with radar,-0.19,0.94
+shootings,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+env,1.16,5.98
+shootings,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+light,-0.89,-0.09
+shootings,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+embed,0.84,2.87
+shootings,"optical, light, embeddings","STRONGER BASELINE (log lag, both outcomes, Poisson)",+all,0.94,6.77
+shootings,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+env,1.65,9.81
+shootings,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+light,-1.66,0.68
+shootings,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+embed,1.28,4.36
+shootings,"optical, light, embeddings","STRONGER BASELINE, negative binomial",+all,0.28,11.04
+shootings,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+env,1.49,6.04
+shootings,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+light,-0.57,-0.14
+shootings,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+embed,1.03,2.78
+shootings,"optical, light, embeddings","STRONGER BASELINE, drop top 1% tracts",+all,1.27,6.29
+shootings,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+env,-0.05,0.3
+shootings,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+light,0.04,0.08
+shootings,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+embed,-0.11,-0.91
+shootings,"optical, light, embeddings",PLACEBO: imagery shuffled across tracts,+all,-0.2,-0.94
+shootings,radar,"strong baseline, radar level",+radar,0.6,0.68
+shootings,radar,"strong baseline, radar level","+all optical, light, embed",0.94,6.77
+shootings,radar,"strong baseline, radar level",+all with radar,1.7,6.17
+shootings,radar,PLACEBO: radar shuffled across tracts,+radar,-0.02,-0.2
+shootings,radar,PLACEBO: radar shuffled across tracts,"+all optical, light, embed",0.94,6.77
+shootings,radar,PLACEBO: radar shuffled across tracts,+all with radar,0.92,6.61
