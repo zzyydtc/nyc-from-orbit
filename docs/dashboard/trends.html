@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Trends | NYC from orbit</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.c897f0d9.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.c897f0d9.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="modulepreload" href="./_observablehq/client.ae6b380c.js">
+<link rel="modulepreload" href="./_observablehq/runtime.13bc3751.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.c4209144.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.0cc910eb.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/93ce672e.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/097745a2.js">
+<link rel="modulepreload" href="./_npm/htl@1.0.0/11521f02.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/604cb63b.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/080cf928.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/f53f17b2.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/b8e751b6.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/c662ea05.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/d162d8c6.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/5cedd0be.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/65d51007.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/c576a91a.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/8b43826d.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/3fb06f14.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/20b76948.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/8683b012.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/5c319046.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/33924f3e.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/8d67a1ae.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/8037bd0b.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/a9ba0229.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/e0a47f97.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/f9e9e0ab.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/2da8eb3b.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/09002e01.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/5108797c.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/c9f2571b.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/f3c78e0d.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/28717d05.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/7c6e2a50.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/3d1d57c6.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/643581a8.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/e99232db.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/bd07fd9a.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/d09f7cc9.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/5f640032.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/af036d7e.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/7b06abe7.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/b42f30a7.js">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2016%2016%22%3E%3Ccircle%20cx=%228%22%20cy=%228%22%20r=%226%22%20fill=%22%2523c51b8a%22/%3E%3C/svg%3E">
+<script type="module">
+
+import {define} from "./_observablehq/client.ae6b380c.js";
+import {registerFile} from "./_observablehq/stdlib.c4209144.js";
+
+registerFile("./data/boroughs.csv", {"name":"./data/boroughs.csv","mimeType":"text/csv","path":"./_file/data/boroughs.67e6e404.csv","lastModified":1793564150015,"size":2082});
+
+define({id: "9eb325ef", inputs: ["FileAttachment","view","Inputs"], outputs: ["B","colors","order","metric"], body: async (FileAttachment,view,Inputs) => {
+const B = await FileAttachment("./data/boroughs.csv").csv({typed: true});
+const colors = {Manhattan: "#c51b8a", Bronx: "#7a0177", Brooklyn: "#2c7fb8", Queens: "#31a354", "Staten Island": "#e08214"};
+const order = Object.keys(colors);
+const metric = view(Inputs.radio(new Map([["Felony complaints", "felony_per_1000"], ["Shooting incidents", "shootings_per_1000"]]), {value: "felony_per_1000", label: "Outcome"}));
+return {B,colors,order,metric};
+}});
+
+define({id: "0e3fcd57", inputs: ["metric","display","Plot","width","order","colors","B"], outputs: ["lbl"], body: (metric,display,Plot,width,order,colors,B) => {
+const lbl = metric === "felony_per_1000" ? "Felony complaints per 1,000 residents" : "Shooting incidents per 1,000 residents";
+display(Plot.plot({
+  width, height: 460, marginRight: 90, style: {fontSize: "13px"},
+  x: {tickFormat: "d", label: null, ticks: 8},
+  y: {label: lbl, grid: true, zero: true},
+  color: {domain: order, range: order.map((k) => colors[k])},
+  marks: [
+    Plot.line(B, {x: "year", y: metric, stroke: "borough", strokeWidth: 2.4, curve: "monotone-x"}),
+    Plot.dot(B, {x: "year", y: metric, fill: "borough", r: 3}),
+    Plot.text(B.filter((d) => d.year === 2025), {x: "year", y: metric, text: "borough", fill: "borough", dx: 8, textAnchor: "start", fontWeight: 600}),
+    Plot.tip(B, Plot.pointer({x: "year", y: metric, stroke: "borough", title: (d) => `${d.borough}, ${d.year}\n${lbl.split(" per")[0]}: ${d[metric]} per 1,000\nCount: ${(metric === "felony_per_1000" ? d.felony : d.shootings).toLocaleString()}`}))
+  ]
+}));
+return {lbl};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<nav class="topnav"><a class="brand" href="./">NYC from orbit</a><a href="./">Map</a><a href="./trends">Trends</a><a href="./results">Does imagery help?</a><a href="./about">About</a></nav>
+</header>
+<main id="observablehq-main" class="observablehq">
+<h1 id="reported-crime-by-borough-2018-to-2025" tabindex="-1"><a class="observablehq-header-anchor" href="#reported-crime-by-borough-2018-to-2025">Reported crime by borough, 2018 to 2025</a></h1>
+<p class="lede">Felony complaints and shooting incidents per 1,000 residents, summed over census tracts with at least 100 residents. Rates divide by 2023 population, so they track counts rather than demographic change.</p>
+<div class="observablehq observablehq--block"><!--:9eb325ef:--></div>
+<div class="card">
+<div class="observablehq observablehq--block"><!--:0e3fcd57:--></div>
+</div>
+<div class="callout">Shootings fell sharply in 2025. That shift sits inside the forward test window (2024 and 2025), which is one reason the shooting result for satellite features is a lead, not a conclusion.</div>
+<p class="note">Counts come from geocoded NYC Open Data records assigned to 2020 census tracts. 2025 shootings come from a separate dataset (see About). Reported crime reflects reporting and enforcement as well as offending.</p>
+</main>
+<footer id="observablehq-footer">
+<div>Independent open-source project, not affiliated with or endorsed by the NYPD, the City of New York or any data provider. Reported crime reflects reporting and enforcement as well as offending; figures are descriptive, not causal. Code MIT, text and figures CC BY 4.0. <a href="https://github.com/zzyydtc/nyc-from-orbit" target="_blank" rel="noopener noreferrer">Source</a></div>
+</footer>
+</div>
+</body>
+</html>

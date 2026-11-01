@@ -2,7 +2,7 @@
 
 Do satellite-derived features (heat, vegetation, night lights, learned image embeddings) add anything to next year's felony complaints and shooting counts for a New York City census tract, beyond last year's counts and census demographics? A tract-level, 2018-2025 test built on public data.
 
-**Status: v0.1 in progress.** The data pipeline, incremental-value test and robustness checks run end to end. A radar probe shows Sentinel-1 backscatter tracks new-building filings, but radar features add about one percent or less to the prediction models. A static interactive map is built; the Power BI report is not finished.
+**Status: v0.1 in progress.** The data pipeline, incremental-value test and robustness checks run end to end. A radar probe shows Sentinel-1 backscatter tracks new-building filings, but radar features add about one percent or less to the prediction models. An interactive dashboard (map, trends, results) is built as a static site; no Power BI report is planned.
 
 ## Headline result
 
@@ -14,9 +14,17 @@ Details, tables and limitations: [docs/RESULTS.md](docs/RESULTS.md).
 
 ![Incremental gain](docs/figures/incremental_gain.png)
 
-## Interactive map
+## Interactive dashboard
 
-`python scripts/16_build_web_map.py` writes `docs/map/index.html`, a self-contained map (year slider; outcomes, vegetation, temperature, night lights, radar). Serve it with `python -m http.server` from `docs/map`, or host it on any static site. It loads Leaflet and OpenStreetMap tiles from the web.
+A static site (Observable Framework, MapLibre GL JS, Observable Plot) in [`dashboard/`](dashboard/), built into `docs/dashboard/`: a tract map with a year slider and a click-for-history panel, borough trends, and the results of the incremental-value test. It needs no server beyond static hosting and publishes only tract-year aggregates.
+
+```bash
+python scripts/17_export_dashboard_data.py   # refresh the aggregated data files
+cd dashboard && npm ci && npm run build      # writes ../docs/dashboard
+cd ../docs && python -m http.server          # then open http://localhost:8000/dashboard/
+```
+
+`npm run dev` in `dashboard/` starts a live-reloading preview. An earlier single-file map is still produced by `python scripts/16_build_web_map.py` into `docs/map/index.html`.
 
 ## Data
 

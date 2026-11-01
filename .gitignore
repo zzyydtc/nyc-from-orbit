@@ -11,3 +11,6 @@ output/
 *.tiff
 *.parquet
 .env
+
+dashboard/node_modules/
+dashboard/.observablehq/cache/

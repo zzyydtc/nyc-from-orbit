@@ -12,3 +12,4 @@
 - Radar features in the incremental-value models, with placebo.
 - Static interactive web map (`scripts/16_build_web_map.py`).
 - Two-page brief (`docs/BRIEF.md`).
+- Static dashboard built with Observable Framework and MapLibre (`dashboard/`), replacing the planned Power BI report.

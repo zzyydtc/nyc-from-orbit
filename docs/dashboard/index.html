@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>NYC from orbit</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.c897f0d9.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.c897f0d9.css">
+<link rel="modulepreload" href="./_observablehq/client.ae6b380c.js">
+<link rel="modulepreload" href="./_observablehq/runtime.13bc3751.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.c4209144.js">
+<link rel="modulepreload" href="./_npm/htl@1.0.0/11521f02.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/93ce672e.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/080cf928.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/604cb63b.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/f53f17b2.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/b8e751b6.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/c662ea05.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/d162d8c6.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/5cedd0be.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/65d51007.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/c576a91a.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/8b43826d.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/3fb06f14.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/20b76948.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/097745a2.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/8683b012.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/5c319046.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/33924f3e.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/8d67a1ae.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/8037bd0b.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/a9ba0229.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/e0a47f97.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/f9e9e0ab.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/2da8eb3b.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/09002e01.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/5108797c.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/c9f2571b.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/f3c78e0d.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/28717d05.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/7c6e2a50.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/3d1d57c6.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/643581a8.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/e99232db.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/bd07fd9a.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/d09f7cc9.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/5f640032.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/af036d7e.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/7b06abe7.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/b42f30a7.js">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2016%2016%22%3E%3Ccircle%20cx=%228%22%20cy=%228%22%20r=%226%22%20fill=%22%2523c51b8a%22/%3E%3C/svg%3E">
+<script type="module">
+
+import {define} from "./_observablehq/client.ae6b380c.js";
+import {registerFile} from "./_observablehq/stdlib.c4209144.js";
+
+registerFile("./data/tracts.geojson", {"name":"./data/tracts.geojson","mimeType":"application/geo+json","path":"./_file/data/tracts.2d516673.geojson","lastModified":1793564149680,"size":743838});
+registerFile("./data/values.json", {"name":"./data/values.json","mimeType":"application/json","path":"./_file/data/values.2177c778.json","lastModified":1793564149963,"size":697402});
+
+define({id: "6c2fd119", inputs: ["FileAttachment"], outputs: ["maplibregl","tracts","V","years","ramps","NA","bin"], body: async (FileAttachment) => {
+while (!window.maplibregl) await new Promise((r) => setTimeout(r, 50));
+const maplibregl = window.maplibregl;
+maplibregl.setWorkerUrl(document.getElementById("ml-worker").href);
+const tracts = await FileAttachment("./data/tracts.geojson").json();
+const V = await FileAttachment("./data/values.json").json();
+const years = V.years;
+const ramps = {
+  felony_rate: ["#fde0dd", "#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177"],
+  shoot_rate: ["#fde0dd", "#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177"],
+  ndvi_mean: ["#edf8e9", "#c7e9c0", "#a1d99b", "#74c476", "#31a354", "#006d2c"],
+  lst_mean: ["#ffffb2", "#fed976", "#feb24c", "#fd8d3c", "#e31a1c", "#800026"],
+  ntl: ["#ffffcc", "#c7e9b4", "#7fcdbb", "#41b6c4", "#2c7fb8", "#253494"],
+  vv_db: ["#f7f7f7", "#d9d9d9", "#bdbdbd", "#969696", "#636363", "#252525"]
+};
+const NA = "#cfd3dc";
+function bin(v, x) {
+  if (x == null) return NA;
+  const b = V.vars[v].breaks;
+  let i = 0;
+  while (i < b.length && x > b[i]) i++;
+  return ramps[v][i];
+}
+return {maplibregl,tracts,V,years,ramps,NA,bin};
+}});
+
+define({id: "616d3a4d", inputs: ["html","V","Generators","Event","invalidation","display"], outputs: ["layerInput","layer","yearInput","year","playBtn","timer"], body: (html,V,Generators,Event,invalidation,display) => {
+const layerInput = html`<select>${Object.entries(V.vars).map(([k, d]) => html`<option value=${k}>${d.label} (${d.unit})</option>`)}</select>`;
+const layer = Generators.input(layerInput);
+const yearInput = html`<input type="range" min="2018" max="2025" step="1" value="2025">`;
+const year = Generators.input(yearInput);
+const playBtn = html`<button class="playbtn" type="button">&#9654; Play</button>`;
+let timer = null;
+playBtn.onclick = () => {
+  if (timer) { clearInterval(timer); timer = null; playBtn.innerHTML = "&#9654; Play"; return; }
+  playBtn.innerHTML = "&#10074;&#10074; Pause";
+  if (+yearInput.value >= 2025) yearInput.value = 2018;
+  timer = setInterval(() => {
+    const next = +yearInput.value + 1;
+    if (next > 2025) { clearInterval(timer); timer = null; playBtn.innerHTML = "&#9654; Play"; return; }
+    yearInput.value = next;
+    yearInput.dispatchEvent(new Event("input", {bubbles: true}));
+  }, 900);
+};
+invalidation.then(() => timer && clearInterval(timer));
+display(html`<div class="controls">
+  <label>Layer<br>${layerInput}</label>
+  <label>Year<br>${yearInput}</label>
+  ${playBtn}
+</div>`);
+return {layerInput,layer,yearInput,year,playBtn,timer};
+}});
+
+define({id: "77baeda2", inputs: ["Mutable"], outputs: ["selected","setSelected"], body: (Mutable) => {
+const selected = Mutable(null);
+const setSelected = (s) => (selected.value = s);
+return {selected,setSelected};
+}});
+
+define({id: "5957451d", inputs: ["maplibregl","tracts","NA","invalidation"], outputs: ["map"], body: async (maplibregl,tracts,NA,invalidation) => {
+const map = new maplibregl.Map({
+  container: "map",
+  style: {
+    version: 8,
+    sources: {osm: {type: "raster", tileSize: 256, maxzoom: 17, tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], attribution: "&copy; OpenStreetMap contributors"}},
+    layers: [{id: "osm", type: "raster", source: "osm", paint: {"raster-saturation": -0.9, "raster-brightness-max": 0.92, "raster-opacity": 0.75}}]
+  },
+  center: [-73.97, 40.71], zoom: 10.2, minZoom: 8.5, maxZoom: 15, attributionControl: {compact: true}
+});
+map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
+await new Promise((r) => map.on("load", r));
+map.addSource("tracts", {type: "geojson", data: tracts, promoteId: "i"});
+map.addLayer({id: "fill", type: "fill", source: "tracts", paint: {"fill-color": ["coalesce", ["feature-state", "c"], NA], "fill-opacity": 0.82}});
+map.addLayer({id: "line", type: "line", source: "tracts", paint: {"line-color": "#4b5363", "line-width": ["interpolate", ["linear"], ["zoom"], 9, 0.15, 13, 0.8], "line-opacity": 0.55}});
+map.addLayer({id: "sel", type: "line", source: "tracts", paint: {"line-color": "#111", "line-width": 2.4}, filter: ["==", ["get", "i"], -1]});
+invalidation.then(() => map.remove());
+return {map};
+}});
+
+define({id: "b59f2ec6", inputs: ["years","year","V","layer","map","bin","ramps","NA"], outputs: ["yi","vals","b","r","lab"], body: (years,year,V,layer,map,bin,ramps,NA) => {
+// Recolor on layer or year change.
+const yi = years.indexOf(year);
+const vals = V.vars[layer].values;
+for (let i = 0; i < vals.length; i++) map.setFeatureState({source: "tracts", id: i}, {c: bin(layer, vals[i][yi])});
+document.getElementById("yearbadge").textContent = year;
+const b = V.vars[layer].breaks, r = ramps[layer];
+const lab = (k) => k === 0 ? `&le; ${b[0]}` : k === b.length ? `&gt; ${b[b.length - 1]}` : `${b[k - 1]} &ndash; ${b[k]}`;
+document.getElementById("legend").innerHTML = `<b>${V.vars[layer].label}</b><br><span style="opacity:.75">${V.vars[layer].unit}</span><br>` +
+  r.map((c, k) => `<i style="background:${c}"></i>${lab(k)}<br>`).join("") + `<i style="background:${NA}"></i>no data<br><span style="opacity:.7">Same scale for all years.</span>`;
+return {yi,vals,b,r,lab};
+}});
+
+define({id: "62dd010a", inputs: ["maplibregl","map","V","layer","years","year","setSelected"], outputs: ["popup"], body: (maplibregl,map,V,layer,years,year,setSelected) => {
+// Hover popup and click selection.
+const popup = new maplibregl.Popup({closeButton: false, closeOnClick: false, offset: 8});
+map.on("mousemove", "fill", (e) => {
+  map.getCanvas().style.cursor = "pointer";
+  const f = e.features[0];
+  const v = V.vars[layer].values[f.properties.i][years.indexOf(year)];
+  popup.setLngLat(e.lngLat).setHTML(`<b>${f.properties.borough}</b>, tract ${f.properties.geoid.slice(5)}<br>${V.vars[layer].label} (${year}): <b>${v == null ? "no data" : v}</b>`).addTo(map);
+});
+map.on("mouseleave", "fill", () => { map.getCanvas().style.cursor = ""; popup.remove(); });
+map.on("click", "fill", (e) => setSelected({i: e.features[0].properties.i, geoid: e.features[0].properties.geoid, borough: e.features[0].properties.borough}));
+return {popup};
+}});
+
+define({id: "aae573b6", inputs: ["map","selected","years","V","Plot","year","html"], outputs: ["body"], body: (map,selected,years,V,Plot,year,html) => {
+// Selected-tract panel.
+const body = document.getElementById("detail-body");
+map.setFilter("sel", ["==", ["get", "i"], selected ? selected.i : -1]);
+if (!selected) {
+  body.className = "note";
+  body.textContent = "Click a tract on the map.";
+} else {
+  body.className = "";
+  const rows = years.map((y, k) => ({year: y, felony: V.vars.felony_rate.values[selected.i][k], shoot: V.vars.shoot_rate.values[selected.i][k]}));
+  const mk = (key, color, title) => Plot.plot({
+    width: 250, height: 120, marginLeft: 34, marginBottom: 22, title,
+    x: {tickFormat: "d", ticks: 4, label: null},
+    y: {label: null, grid: true, nice: true},
+    marks: [Plot.lineY(rows, {x: "year", y: key, stroke: color, strokeWidth: 2}), Plot.dot(rows, {x: "year", y: key, fill: color, r: 3}),
+      Plot.ruleX(rows.filter((d) => d.year === year), {x: "year", stroke: "#888", strokeDasharray: "3,3"})]
+  });
+  body.replaceChildren(html`<div><b>${selected.borough}</b>, tract ${selected.geoid.slice(5)}</div>
+    <div class="note" style="margin-bottom:6px">GEOID ${selected.geoid}</div>
+    ${mk("felony", "#c51b8a", "Felony complaints per 1,000")}
+    ${mk("shoot", "#7a0177", "Shootings per 1,000")}`);
+}
+return {body};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<nav class="topnav"><a class="brand" href="./">NYC from orbit</a><a href="./">Map</a><a href="./trends">Trends</a><a href="./results">Does imagery help?</a><a href="./about">About</a></nav>
+</header>
+<main id="observablehq-main" class="observablehq">
+<h1 id="can-satellites-help-predict-crime-in-new-york-city" tabindex="-1"><a class="observablehq-header-anchor" href="#can-satellites-help-predict-crime-in-new-york-city">Can satellites help predict crime in New York City?</a></h1>
+<p class="lede">A tract-level test, 2018 to 2025, of whether vegetation, heat, night lights, radar and learned image embeddings add anything to next year's felony complaints and shootings beyond last year's counts and census demographics. Explore the data below, then see the answer.</p>
+<script src="./_import/vendor/maplibre-gl.e0b2bebd.js"></script>
+<link id="ml-worker" rel="preload" as="script" href="./_file/vendor/maplibre-gl-csp-worker.37624cc1.js">
+<div class="kpis">
+  <div class="card kpi"><div class="big null">~0%</div><div class="label">Felony complaints: added predictive value from imagery, once the baseline is set properly</div></div>
+  <div class="card kpi"><div class="big pos">~6%</div><div class="label">Shootings: possible gain in a two-year forward test, but only about 1% in spatial cross-validation</div></div>
+  <div class="card kpi"><div class="big null">≤1%</div><div class="label">Radar backscatter, even though it does detect new construction</div></div>
+</div>
+<div class="observablehq observablehq--block"><!--:6c2fd119:--></div>
+<div class="observablehq observablehq--block"><!--:616d3a4d:--></div>
+<div class="observablehq observablehq--block"><!--:77baeda2:--></div>
+<div class="grid grid-cols-4" style="grid-auto-rows: auto; gap: 14px;">
+  <div class="card" style="grid-column: span 3; padding: 0; border: none; background: none; box-shadow: none;">
+    <div class="mapwrap">
+      <div id="map"></div>
+      <div class="yearbadge" id="yearbadge"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <p class="note">Census tracts with at least 100 residents. Rates use 2023 population for every year. Hover a tract for its value; click it to see its history.</p>
+  </div>
+  <div class="card" id="detail">
+    <h3>Selected tract</h3>
+    <div id="detail-body" class="note">Click a tract on the map.</div>
+  </div>
+</div>
+<div class="observablehq observablehq--block"><!--:5957451d:--></div>
+<div class="observablehq observablehq--block"><!--:b59f2ec6:--></div>
+<div class="observablehq observablehq--block"><!--:62dd010a:--></div>
+<div class="observablehq observablehq--block"><!--:aae573b6:--></div>
+</main>
+<footer id="observablehq-footer">
+<div>Independent open-source project, not affiliated with or endorsed by the NYPD, the City of New York or any data provider. Reported crime reflects reporting and enforcement as well as offending; figures are descriptive, not causal. Code MIT, text and figures CC BY 4.0. <a href="https://github.com/zzyydtc/nyc-from-orbit" target="_blank" rel="noopener noreferrer">Source</a></div>
+</footer>
+</div>
+</body>
+</html>

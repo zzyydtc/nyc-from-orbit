@@ -1,0 +1,19 @@
+{
+  "name": "nyc-from-orbit-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "observable preview",
+    "build": "node clean-output.mjs && observable build",
+    "clean": "observable clean"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@observablehq/framework": "1.13.4",
+    "maplibre-gl": "5.9.0"
+  }
+}

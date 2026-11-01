@@ -1,6 +1,6 @@
 # Power BI report
 
-The report file itself (`.pbix`) is not in the repository yet. This page describes the data model and how to build the report from the exported tables.
+No Power BI report is planned for this repository: the open-source [dashboard](../dashboard/) covers the same pages (map, trends, results) as a static site. This page is kept for readers who want to build their own Power BI report from the exported tables, and describes the data model.
 
 ## Export
 

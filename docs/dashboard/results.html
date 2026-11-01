@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Does imagery help? | NYC from orbit</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.c897f0d9.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.c897f0d9.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="modulepreload" href="./_observablehq/client.ae6b380c.js">
+<link rel="modulepreload" href="./_observablehq/runtime.13bc3751.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.c4209144.js">
+<link rel="modulepreload" href="./_npm/htl@1.0.0/11521f02.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.0cc910eb.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/93ce672e.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/097745a2.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/604cb63b.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/080cf928.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/f53f17b2.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/b8e751b6.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/c662ea05.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/d162d8c6.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/5cedd0be.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/65d51007.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/c576a91a.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/8b43826d.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/3fb06f14.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/20b76948.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/8683b012.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/5c319046.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/33924f3e.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/8d67a1ae.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/8037bd0b.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/a9ba0229.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/e0a47f97.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/f9e9e0ab.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/2da8eb3b.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/09002e01.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/5108797c.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/c9f2571b.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/f3c78e0d.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/28717d05.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/7c6e2a50.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/3d1d57c6.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/643581a8.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/e99232db.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/bd07fd9a.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/d09f7cc9.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/5f640032.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/af036d7e.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/7b06abe7.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/b42f30a7.js">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2016%2016%22%3E%3Ccircle%20cx=%228%22%20cy=%228%22%20r=%226%22%20fill=%22%2523c51b8a%22/%3E%3C/svg%3E">
+<script type="module">
+
+import {define} from "./_observablehq/client.ae6b380c.js";
+import {registerFile} from "./_observablehq/stdlib.c4209144.js";
+
+registerFile("./data/gains.csv", {"name":"./data/gains.csv","mimeType":"text/csv","path":"./_file/data/gains.52d9eb88.csv","lastModified":1793564150072,"size":4373});
+registerFile("./data/radar.csv", {"name":"./data/radar.csv","mimeType":"text/csv","path":"./_file/data/radar.1c89d6ff.csv","lastModified":1793564150081,"size":659});
+
+define({id: "d9d7a17c", inputs: ["FileAttachment","view","Inputs"], outputs: ["G","R","featureName","variantName","rows","outcomes","variants","outcome","variant"], body: async (FileAttachment,view,Inputs) => {
+const G = await FileAttachment("./data/gains.csv").csv({typed: true});
+const R = await FileAttachment("./data/radar.csv").csv({typed: true});
+const featureName = {
+  "+env": "Vegetation + temperature", "+light": "Night lights", "+embed": "Embeddings", "+all": "All optical, light, embeddings",
+  "+radar": "Radar (VV, VH)", "+all optical, light, embed": "All optical, light, embeddings", "+all with radar": "All, with radar"
+};
+const variantName = (v) => v.startsWith("PLACEBO") ? "Placebo: imagery shuffled across tracts" : v.includes("negative binomial") ? "Negative binomial" : v.includes("top 1%") ? "Drop top 1% of tracts" : "Poisson (main)";
+const rows = G.filter((d) => d.features !== "+all optical, light, embed").flatMap((d) => [
+  {outcome: d.outcome, variant: variantName(d.variant), feature: featureName[d.features] ?? d.features, family: d.family, scheme: "Spatial cross-validation", gain: d.cv_gain_pct},
+  {outcome: d.outcome, variant: variantName(d.variant), feature: featureName[d.features] ?? d.features, family: d.family, scheme: "Forward test 2024-25", gain: d.fwd_gain_pct}
+]);
+const outcomes = new Map([["Felony complaints", "felony_complaints"], ["Shooting incidents", "shootings"]]);
+const variants = ["Poisson (main)", "Negative binomial", "Drop top 1% of tracts", "Placebo: imagery shuffled across tracts"];
+const outcome = view(Inputs.radio(outcomes, {value: "felony_complaints", label: "Outcome"}));
+const variant = view(Inputs.select(variants, {value: "Poisson (main)", label: "Model variant"}));
+return {G,R,featureName,variantName,rows,outcomes,variants,outcome,variant};
+}});
+
+define({id: "5570f6cf", inputs: ["rows","outcome","variant","display","Plot","width"], outputs: ["sel","featOrder","present"], body: (rows,outcome,variant,display,Plot,width) => {
+const sel = rows.filter((d) => d.outcome === outcome && d.variant === variant);
+const featOrder = ["Vegetation + temperature", "Night lights", "Embeddings", "Radar (VV, VH)", "All optical, light, embeddings", "All, with radar"];
+const present = featOrder.filter((f) => sel.some((d) => d.feature === f));
+display(Plot.plot({
+  width, height: 90 + present.length * 52, marginLeft: 215, marginRight: 150, marginBottom: 46, style: {fontSize: "13px"},
+  x: {label: "Gain over baseline (% deviance reduction)", grid: true, nice: true},
+  y: {label: null, domain: present},
+  fy: {label: null, domain: ["Spatial cross-validation", "Forward test 2024-25"]},
+  color: {domain: ["Spatial cross-validation", "Forward test 2024-25"], range: ["#2c7fb8", "#c51b8a"], legend: true},
+  facet: {data: sel, y: "scheme"},
+  marks: [
+    Plot.ruleX([0], {stroke: "#888"}),
+    Plot.barX(sel, {y: "feature", x: "gain", fill: "scheme", tip: true, title: (d) => `${d.feature}\n${d.scheme}\nGain: ${d.gain}%`}),
+    Plot.text(sel, {y: "feature", x: "gain", text: (d) => `${d.gain > 0 ? "+" : ""}${d.gain.toFixed(1)}%`, textAnchor: (d) => d.gain >= 0 ? "start" : "end", dx: (d) => d.gain >= 0 ? 6 : -6, fontSize: 12, fill: "currentColor"})
+  ]
+}));
+return {sel,featOrder,present};
+}});
+
+define({id: "8c23ca98", inputs: ["display","outcome","html"], body: (display,outcome,html) => {
+display(outcome === "felony_complaints"
+  ? html`<div class="callout"><b>Felony complaints:</b> no detectable gain. Every feature set stays within about two points of zero, and the placebo looks the same. An earlier ~5% gain came from a weak baseline.</div>`
+  : html`<div class="callout"><b>Shootings:</b> vegetation and temperature features cut forward-test error by about 6%, but only about 1% in spatial cross-validation, and the forward test covers two years in which shootings fell sharply. A lead worth following, not a conclusion.</div>`);
+}});
+
+define({id: "c0a447c4", inputs: ["R","display","html"], outputs: ["radarRows"], body: (R,display,html) => {
+const radarRows = R.map((d) => ({test: d.test, view: d.view === "long_difference" ? "Long difference 2018 to 2025" : "Tract-year panel", estimate: d.estimate, p: d.p, n: d.n}));
+display(html`<div class="card"><table class="t"><thead><tr><th>View</th><th>Test</th><th class="n">Estimate</th><th class="n">p</th><th class="n">n</th></tr></thead><tbody>
+${radarRows.map((d) => html`<tr><td>${d.view}</td><td>${d.test}</td><td class="n">${d.estimate.toFixed(3)}</td><td class="n">${d.p == null || Number.isNaN(d.p) ? "" : d.p < 0.001 ? "<0.001" : d.p.toFixed(2)}</td><td class="n">${d.n}</td></tr>`)}
+</tbody></table></div>`);
+return {radarRows};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<nav class="topnav"><a class="brand" href="./">NYC from orbit</a><a href="./">Map</a><a href="./trends">Trends</a><a href="./results">Does imagery help?</a><a href="./about">About</a></nav>
+</header>
+<main id="observablehq-main" class="observablehq">
+<h1 id="does-imagery-add-predictive-value" tabindex="-1"><a class="observablehq-header-anchor" href="#does-imagery-add-predictive-value">Does imagery add predictive value?</a></h1>
+<p class="lede">Each bar is the percent reduction in out-of-sample error versus a strong baseline (log lagged counts of both outcomes, log population and income, and census covariates). Zero means no improvement; negative means the imagery made predictions worse. Two validation schemes are shown, and the shuffled-imagery placebo shows what noise looks like.</p>
+<div class="observablehq observablehq--block"><!--:d9d7a17c:--></div>
+<div class="card">
+<div class="observablehq observablehq--block"><!--:5570f6cf:--></div>
+</div>
+<div class="observablehq observablehq--block"><!--:8c23ca98:--></div>
+<h2 id="radar-sees-construction-but-not-crime" tabindex="-1"><a class="observablehq-header-anchor" href="#radar-sees-construction-but-not-crime">Radar sees construction, but not crime</a></h2>
+<p class="lede">Sentinel-1 radar backscatter increases where new buildings are filed with the Department of Buildings. The sensor and pipeline work. They still add about one percent or less to crime prediction.</p>
+<div class="observablehq observablehq--block"><!--:c0a447c4:--></div>
+<p class="note">Filings are applications, not completed buildings, so counts are a noisy yardstick. This is a tract-level association, not recovery of individual construction sites.</p>
+</main>
+<footer id="observablehq-footer">
+<div>Independent open-source project, not affiliated with or endorsed by the NYPD, the City of New York or any data provider. Reported crime reflects reporting and enforcement as well as offending; figures are descriptive, not causal. Code MIT, text and figures CC BY 4.0. <a href="https://github.com/zzyydtc/nyc-from-orbit" target="_blank" rel="noopener noreferrer">Source</a></div>
+</footer>
+</div>
+</body>
+</html>

@@ -94,6 +94,8 @@ python scripts/14_radar_probe.py
 python scripts/15_radar_models.py felony_complaints
 python scripts/15_radar_models.py shootings
 python scripts/16_build_web_map.py
+python scripts/17_export_dashboard_data.py
+(cd dashboard && npm ci && npm run build)
 ```
 
 ## Maps

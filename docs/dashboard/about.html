@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>About | NYC from orbit</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_import/style.c897f0d9.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_import/style.c897f0d9.css">
+<link rel="modulepreload" href="./_observablehq/client.ae6b380c.js">
+<link rel="modulepreload" href="./_observablehq/runtime.13bc3751.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.c4209144.js">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2016%2016%22%3E%3Ccircle%20cx=%228%22%20cy=%228%22%20r=%226%22%20fill=%22%2523c51b8a%22/%3E%3C/svg%3E">
+<script type="module">
+
+import "./_observablehq/client.ae6b380c.js";
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<header id="observablehq-header">
+<nav class="topnav"><a class="brand" href="./">NYC from orbit</a><a href="./">Map</a><a href="./trends">Trends</a><a href="./results">Does imagery help?</a><a href="./about">About</a></nav>
+</header>
+<main id="observablehq-main" class="observablehq">
+<h1 id="about-this-project" tabindex="-1"><a class="observablehq-header-anchor" href="#about-this-project">About this project</a></h1>
+<p class="lede">An independent, open-source test of whether satellite-derived features carry information about tract-level reported crime that last year's counts and census demographics do not. The honest answer so far is: mostly no.</p>
+<h2 id="design" tabindex="-1"><a class="observablehq-header-anchor" href="#design">Design</a></h2>
+<ul>
+<li><strong>Unit:</strong> 2020 census tracts with at least 100 residents (about 2,190), target years 2019 to 2025.</li>
+<li><strong>Outcomes:</strong> felony complaints and shooting incidents from NYC Open Data, counted per tract-year.</li>
+<li><strong>Baseline:</strong> log lagged counts of both outcomes, log population and income, and 2023 ACS age, poverty, renter and degree shares (held constant across years).</li>
+<li><strong>Satellite features, previous year:</strong> Sentinel-2 vegetation, Landsat surface temperature, VIIRS night lights, AlphaEarth embeddings (8 components), Sentinel-1 radar backscatter and its change.</li>
+<li><strong>Model:</strong> Poisson regression with a population offset and year and county effects.</li>
+<li><strong>Validation:</strong> spatial-block cross-validation (whole clusters of neighbouring tracts held out) and a forward test on 2024 and 2025.</li>
+</ul>
+<h2 id="limits" tabindex="-1"><a class="observablehq-header-anchor" href="#limits">Limits</a></h2>
+<ul>
+<li>Reported crime reflects reporting and enforcement behaviour as well as offending.</li>
+<li>Everything is annual and tract-level; crime concentrates at finer places and times.</li>
+<li>Census covariates are static (2023); demographic change over the period is not modelled.</li>
+<li>The forward test has two years, and shootings fell sharply in 2025.</li>
+<li>Results are associations, not causes.</li>
+</ul>
+<h2 id="responsible-use" tabindex="-1"><a class="observablehq-header-anchor" href="#responsible-use">Responsible use</a></h2>
+<p>Not for targeting individuals or demographic groups, or for resource allocation without independent review of reporting bias. See the model card in the repository.</p>
+<h2 id="data-and-required-notices" tabindex="-1"><a class="observablehq-header-anchor" href="#data-and-required-notices">Data and required notices</a></h2>
+<p>This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau. Contains modified Copernicus Sentinel data 2018-2025. The AlphaEarth Foundations Satellite Embedding dataset is produced by Google and Google DeepMind. Landsat data courtesy of the U.S. Geological Survey; VIIRS Black Marble courtesy of NASA LAADS DAAC. NYC data courtesy of the NYPD, Department of City Planning and Department of Buildings through NYC Open Data, aggregated and modified here; the City does not endorse this project. Map tiles © OpenStreetMap contributors.</p>
+<p>2025 shootings come from a separate NYC Open Data dataset than 2018 to 2024. Full source table and terms review: DATA_SOURCES.md in the repository.</p>
+<h2 id="code-and-reproduction" tabindex="-1"><a class="observablehq-header-anchor" href="#code-and-reproduction">Code and reproduction</a></h2>
+<p>All scripts, the model card and the full results write-up are in the <a href="https://github.com/zzyydtc/nyc-from-orbit" target="_blank" rel="noopener noreferrer">GitHub repository</a>. This dashboard is built with Observable Framework, MapLibre GL JS and Observable Plot from aggregated tract-year files; no incident records are published.</p>
+</main>
+<footer id="observablehq-footer">
+<div>Independent open-source project, not affiliated with or endorsed by the NYPD, the City of New York or any data provider. Reported crime reflects reporting and enforcement as well as offending; figures are descriptive, not causal. Code MIT, text and figures CC BY 4.0. <a href="https://github.com/zzyydtc/nyc-from-orbit" target="_blank" rel="noopener noreferrer">Source</a></div>
+</footer>
+</div>
+</body>
+</html>
