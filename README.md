@@ -2,7 +2,7 @@
 
 Do satellite-derived features (heat, vegetation, night lights, learned image embeddings) add anything to next year's felony complaints and shooting counts for a New York City census tract, beyond last year's counts and census demographics? A tract-level, 2018-2025 test built on public data.
 
-**Status: v0.1 in progress.** The data pipeline, incremental-value test and robustness checks run end to end. A radar probe shows Sentinel-1 backscatter tracks new-building filings, but radar features add about one percent or less to the prediction models. An interactive dashboard (map, trends, results) is built as a static site; no Power BI report is planned.
+**Status: v0.1.** Live dashboard: https://zzyydtc.github.io/nyc-from-orbit/dashboard/. The data pipeline, incremental-value test and robustness checks run end to end. A radar probe shows Sentinel-1 backscatter tracks new-building filings, but radar features add about one percent or less to the prediction models. An interactive dashboard (map, trends, results) is built as a static site; no Power BI report is planned.
 
 ## Headline result
 
@@ -15,6 +15,8 @@ Details, tables and limitations: [docs/RESULTS.md](docs/RESULTS.md).
 ![Incremental gain](docs/figures/incremental_gain.png)
 
 ## Interactive dashboard
+
+**Live: https://zzyydtc.github.io/nyc-from-orbit/dashboard/**
 
 A static site (Observable Framework, MapLibre GL JS, Observable Plot) in [`dashboard/`](dashboard/), built into `docs/dashboard/`: a tract map with a year slider and a click-for-history panel, borough trends, and the results of the incremental-value test. It needs no server beyond static hosting and publishes only tract-year aggregates.
 
@@ -46,6 +48,24 @@ pip install -e ".[dev]"
 - [docs/RESULTS.md](docs/RESULTS.md): results and limitations
 - [docs/MODEL_CARD.md](docs/MODEL_CARD.md): intended use and failure modes
 - [docs/POWERBI.md](docs/POWERBI.md): Power BI data model and export
+
+## Known limitations and open-source gaps
+
+Stated plainly so you know what to expect:
+
+- **Reproducibility:** scripts run in order (`01` to `17`, see [docs/RESULTS.md](docs/RESULTS.md#reproduce)); there is no single `make` target. Dependencies are pinned in `requirements-lock.txt`. The radar pipeline was re-run from scratch and reproduced its results exactly; the rest of the pipeline has not had a full from-scratch rerun.
+- **Provenance:** the fetch scripts do not record checksums or retrieval dates for downloaded data, so a re-download after upstream revisions may differ.
+- **Tests:** unit tests cover the metric code only. There is no fixture-based smoke test of the full pipeline.
+- **Release hygiene:** no pre-commit hooks, no DOI, and no tagged release yet.
+- **Modelling:** census covariates are static (2023 ACS), the shooting forward test spans two years, and there is no spatial error analysis. See the model card in [docs/MODEL_CARD.md](docs/MODEL_CARD.md).
+- **Dashboard:** the map loads OpenStreetMap tiles directly, which is fine for a demo but not for heavy traffic.
+- **Data terms:** this repository publishes only aggregated tract-year values, never incident records. Source terms are reviewed in [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md).
+
+## Contributing and support
+
+Issues and pull requests are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [SECURITY.md](SECURITY.md). To cite this work, use [CITATION.cff](CITATION.cff).
+
+This is an independent project and is not affiliated with, endorsed by, or sponsored by the NYPD or any other city agency.
 
 ## Attribution
 
